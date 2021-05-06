@@ -19,6 +19,23 @@
       </div>
     </main>
     <!-- javascript -->
-    <script src="https://github.com/flitteriefie/flitteriefie.github.io/blob/main/app.js"></script>
+    <script type="text/javascript">
+      let count = 0;
+
+      const value = document.querySelector("#value");
+      const btn = document.getElementById("btn");
+
+      btn.addEventListener("click", function() {
+        count = getRandomNumber();
+        value.textContent = count;
+      })
+
+
+
+
+      function getRandomNumber() {
+          return Math.floor(Math.random() * 1000);
+      }
+    </script>
   </body>
 </html>
